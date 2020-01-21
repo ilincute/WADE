@@ -16,6 +16,7 @@ public class WikiDataPredicates {
 
     public static final String SPARQL_QUERY_TEMPLATE_FILTER_MUSEUM_EXPONATES =
             "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+            "PREFIX wdt: <http://www.wikidata.org/prop/direct/>" +
             "select ?thing" +
             "where" +
             "{" +
