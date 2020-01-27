@@ -1,0 +1,10 @@
+.button {
+  border: none;
+  padding: 10px 20px;
+  min-width: 50px;
+  background-color: white;
+  border-radius: 23px;
+  outline: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=buttons.css.map */

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Languages-Page</title>
+        <link href="./language.css" rel="stylesheet"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="initLanguage()">
+        <div class="content">
+            <div class="main">
+                <div class="title-section">
+                    <h1 id="select-language" class="title">Select language</h1>
+                </div>
+               
+    
+                <ul class="second-canvas">
+                    <li id="english" onclick="changeLanguage('en')" class="element">English</li>
+                    <li id="german" onclick="changeLanguage('de')" class="element">Deutsch</li>
+                    <li id="french" onclick="changeLanguage('fr')" class="element">Français</li>
+                    <li id="romanian" onclick="changeLanguage('ro')" class="element">Română</li>
+                </ul>
+            </div>
+           
+
+            <div class="buttons">
+                <button id="next" class="button margin-right-30 submit-button">Next</button>
+            </div>
+          
+        </div>
+        <script src="language.js"></script>
+    </body>
+</html>
