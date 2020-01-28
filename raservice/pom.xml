@@ -36,22 +36,30 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>com.datastax.oss</groupId>
-            <artifactId>java-driver-core</artifactId>
-            <version>${driver.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.datastax.oss</groupId>-->
+            <!--<artifactId>java-driver-core</artifactId>-->
+            <!--<version>${driver.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>com.datastax.oss</groupId>
-            <artifactId>java-driver-query-builder</artifactId>
-            <version>${driver.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.datastax.oss</groupId>-->
+            <!--<artifactId>java-driver-query-builder</artifactId>-->
+            <!--<version>${driver.version}</version>-->
+        <!--</dependency>-->
 
+        <!--<dependency>-->
+            <!--<groupId>com.datastax.oss</groupId>-->
+            <!--<artifactId>java-driver-mapper-runtime</artifactId>-->
+            <!--<version>${driver.version}</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
         <dependency>
-            <groupId>com.datastax.oss</groupId>
-            <artifactId>java-driver-mapper-runtime</artifactId>
-            <version>${driver.version}</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
