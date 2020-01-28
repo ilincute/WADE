@@ -1,6 +1,5 @@
 package coreapi.coreapi.services;
 
-import com.sun.javaws.IconUtil;
 import coreapi.coreapi.dao.TokenDAO;
 import coreapi.coreapi.data.User;
 import org.apache.commons.io.IOUtils;
