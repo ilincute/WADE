@@ -35,4 +35,28 @@ public class UserDataDAOTest
 
     }
 
+    @Test
+    void testUpdate()
+    {
+        Exception ex = null;
+        try
+        {
+            UserData metadata = new UserData();
+            metadata.setId("123");
+            metadata.setUserId("321");
+            metadata.setActionType("@ction");
+            metadata.setActionValue("valasdasue");
+
+
+            UserDataDAO.update(metadata);
+        }
+        catch (Exception e)
+        {
+            ex = e;
+        }
+
+        assertEquals(null, ex);
+
+    }
+
 }
