@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login-Page</title>
+        <link href="./login.css" rel="stylesheet" type="text/css"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+
+    <body onload="initLanguage()">
+        <div class="content">
+            <div class="main">
+                <h1 class="title">Login</h1>
+                <div class="field">
+                    <!-- <h2 class="title">Email</h2> -->
+                    <input id="email" type="email" class="form-control input-rounded" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="field">
+                    <!-- <h2 class="title">Password</h2> -->
+                    <input id="password" type="password" class="form-control input-rounded" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="field flex-end">
+                    <button onclick="login()" class="button">
+                        Submit
+                    </button>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button onclick="window.location.href = '/authentication'" id="next" class="button margin-right-30 submit-button">Back</button>
+            </div>
+        <script src="login.js"></script>
+    </body>
+</html>
+

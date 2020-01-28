@@ -6,31 +6,23 @@ const path = require('path');
 // ---------------- Welcome -------------------
 
 app.use(express.static("images"));
+app.use(express.static("shared"));
+app.use(express.static("pages/welcome"));
+app.use(express.static("pages/language"));
+app.use(express.static("pages/homepage"));
+app.use(express.static("pages/me"));
+app.use(express.static("pages/authentication"));
+app.use(express.static("pages/login"));
+app.use(express.static("pages/sign-up"));
 
 app.get('/welcome', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/welcome/welcome.html'));
-});
-
-app.get('/welcome.css', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/welcome/welcome.css'));
-});
-
-app.get('/welcome.js', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/welcome/welcome.js'));
 });
 
 // ---------------- Language -------------------
 
 app.get('/language', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/language/language.html'));
-});
-
-app.get('/language.css', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/language/language.css'));
-});
-
-app.get('/language.js', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/language/language.js'));
 });
 
 
@@ -40,15 +32,29 @@ app.get('/homepage', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/homepage/homepage.html'));
 });
 
-app.get('/homepage.css', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/homepage/homepage.css'));
+// ---------------- Me -------------------
+
+app.get('/me', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/me/me.html'));
 });
 
-app.get('/homepage.js', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/homepage/homepage.js'));
+// ---------------- Authentication -------------------
+
+app.get('/authentication', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/authentication/authentication.html'));
 });
 
+// ---------------- Login -------------------
 
+app.get('/login', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/login/login.html'));
+});
+
+// ---------------- Sign-up -------------------
+
+app.get('/sign-up', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/sign-up/sign-up.html'));
+});
 
 
 

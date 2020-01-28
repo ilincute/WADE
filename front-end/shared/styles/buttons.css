@@ -6,5 +6,10 @@
   border-radius: 23px;
   outline: none;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.button-large {
+  min-width: 80%;
 }
 /*# sourceMappingURL=buttons.css.map */
