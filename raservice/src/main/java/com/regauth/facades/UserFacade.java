@@ -21,17 +21,17 @@ public class UserFacade
         UserDAO.create(user);
     }
 
-    public static boolean authenticate(String userName, String password)
+    public static User authenticate(String userName, String password)
     {
         User dbUser = UserDAO.getForUsername(userName);
         if (dbUser != null)
         {
             if (dbUser.getPassword().equals(DigestUtils.sha256Hex(password)))
             {
-                return true;
+                return dbUser;
             }
         }
-        return false;
+        return null;
     }
 
 }
