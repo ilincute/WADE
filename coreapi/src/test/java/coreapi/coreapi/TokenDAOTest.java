@@ -4,7 +4,7 @@ import coreapi.coreapi.dao.TokenDAO;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @SpringBootTest
 public class TokenDAOTest
@@ -14,17 +14,8 @@ public class TokenDAOTest
     void testCreate()
     {
 
-        Exception ex = null;
-        try
-        {
-            TokenDAO.addForUser("1234234");
-        }
-        catch (Exception e)
-        {
-            ex = e;
-        }
 
-        assertEquals(null, ex);
+        assertNotEquals(null, TokenDAO.addForUser("1234234"));
 
     }
 }

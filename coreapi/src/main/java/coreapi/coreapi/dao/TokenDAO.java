@@ -12,9 +12,10 @@ public class TokenDAO
 
     public static final String INSERT_FORMAT = "insert into tokens values (?, ?)";
 
-    public static void addForUser(String userId)
+    public static String addForUser(String userId)
     {
         Connection con = null;
+        String token = null;
         try
         {
             con = DBFactory.getConnection();
@@ -22,7 +23,8 @@ public class TokenDAO
             PreparedStatement statement = con.prepareStatement(INSERT_FORMAT);
             statement.setQueryTimeout(30);
             statement.setString(1, userId);
-            statement.setString(2, UUID.randomUUID().toString());
+            token = UUID.randomUUID().toString();
+            statement.setString(2, token);
 
             statement.executeUpdate();
         }
@@ -44,7 +46,7 @@ public class TokenDAO
         }
 
 
-
+        return token;
     }
 
 }
