@@ -4,6 +4,8 @@ import coreapi.coreapi.dao.TokenDAO;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.UUID;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
@@ -13,7 +15,7 @@ public class TokenDAOTest
     @Test
     void testCreate()
     {
-        assertNotEquals(null, TokenDAO.addForUser("1234234"));
+        assertNotEquals(null, TokenDAO.addForUser("1234234", UUID.randomUUID().toString()));
     }
 
     @Test

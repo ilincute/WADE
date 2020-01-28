@@ -15,10 +15,10 @@ public class TokenDAO
     public static final String DELETE_FORMAT = "delete from tokens where token = ?";
     public static final String GET_FORMAT = "select * from tokens where token = ?";
 
-    public static String addForUser(String userId)
+    public static String addForUser(String userId, String token)
     {
         Connection con = null;
-        String token = null;
+
         try
         {
             con = DBFactory.getConnection();
@@ -26,7 +26,6 @@ public class TokenDAO
             PreparedStatement statement = con.prepareStatement(INSERT_FORMAT);
             statement.setQueryTimeout(30);
             statement.setString(1, userId);
-            token = UUID.randomUUID().toString();
             statement.setString(2, token);
 
             statement.executeUpdate();
