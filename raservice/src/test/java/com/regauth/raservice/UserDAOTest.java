@@ -46,4 +46,27 @@ public class UserDAOTest
         assertEquals(user.getPassword(), "s3cr3t");
 
     }
+
+    @Test
+    void testUpdate()
+    {
+        Exception ex = null;
+        try
+        {
+            User user = new User();
+            user.setId("sdasd");
+            user.setUserName("foo");
+            user.setLastName("vasile");
+            user.setEmail("foo@gmai.com");
+            user.setPassword("s3cr3t");
+
+            UserDAO.update(user);
+        }
+        catch (Exception e)
+        {
+            ex = e;
+        }
+
+        assertEquals(null, ex);
+    }
 }
