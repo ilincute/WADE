@@ -9,6 +9,8 @@ public class UserDAO
 {
     private static final String INSERT_FORMAT = "insert into user values(?, ?, ?, ?, ?)";
     private static final String SELECT_FORMAT = "select * from user where userName = ?";
+    private static final String UPDATE_FORMAT
+            = "update user set userName = ?, lastName = ?, email = ?, password = ? where id = ?";
 
     private static final String USER_ATTR_ID = "id";
     private static final String USER_ATTR_USER_NAME = "userName";
@@ -42,8 +44,7 @@ public class UserDAO
         {
             try
             {
-                if(con != null)
-                    con.close();
+                if (con != null) con.close();
             }
             catch(SQLException e)
             {
@@ -88,8 +89,7 @@ public class UserDAO
         {
             try
             {
-                if(con != null)
-                    con.close();
+                if (con != null) con.close();
             }
             catch(SQLException e)
             {
@@ -101,6 +101,36 @@ public class UserDAO
 
     public static void update(User user)
     {
+
+        Connection con = null;
+        try {
+            con = DBFactory.getConnection();
+
+            PreparedStatement statement = con.prepareStatement(UPDATE_FORMAT);
+            statement.setString(1, user.getUserName());
+            statement.setString(2, user.getLastName());
+            statement.setString(3, user.getEmail());
+            statement.setString(4, user.getPassword());
+            statement.setString(5, user.getId());
+
+            statement.executeUpdate();
+        }
+        catch (SQLException e)
+        {
+
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (con != null) con.close();
+            }
+            catch(SQLException e)
+            {
+                System.err.println(e.getMessage());
+            }
+        }
 
     }
 }
