@@ -18,7 +18,7 @@ public class LoginController
 
     @RequestMapping(path = "/authenticate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity<String> authenticate(
+    public ResponseEntity<User> authenticate(
             @RequestParam(name = "uerName") String userName,
             @RequestParam(name = "password") String password)
     {
@@ -26,9 +26,11 @@ public class LoginController
         User currentUser = UserFacade.authenticate(userName, password);
         if (currentUser != null)
         {
-            return new ResponseEntity<String>("", HttpStatus.OK);
+            return new ResponseEntity<User>(currentUser, HttpStatus.OK);
         }
 
-        return new ResponseEntity<>("", HttpStatus.CONFLICT);
+        User user = new User();
+        user.setUserName("fail");
+        return new ResponseEntity<User>(user, HttpStatus.CONFLICT);
     }
 }
