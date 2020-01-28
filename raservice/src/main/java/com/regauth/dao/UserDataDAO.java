@@ -6,11 +6,15 @@ import com.regauth.dbcore.DBFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDataDAO
 {
 
+    private static final String SELECT_FORMAT = "select * from userdata where userId = ?";
     private static final String INSERT_FORMAT = "insert into userdata values(?, ?, ?, ?)";
     private static final String UPDATE_FORMAT
             = "update userdata set userId = ?, actionType = ?, actionValue = ? where id = ?";
@@ -96,8 +100,51 @@ public class UserDataDAO
     }
 
 
-    public static UserData getMetadataFor(User user)
+    public static List<UserData> getMetadataFor(User user)
     {
-        return null;
+        Connection con = null;
+        List<UserData> metadatas = null;
+
+        try
+        {
+            con = DBFactory.getConnection();
+            PreparedStatement statement = con.prepareStatement(SELECT_FORMAT);
+            statement.setString(1, user.getId());
+
+            ResultSet rs = statement.executeQuery();
+
+            metadatas = new ArrayList<>();
+
+            while (rs.next()) // match only the first result
+            {
+                UserData metadata = new UserData();
+
+                metadata.setId(rs.getString(USER_DATA_ATTR_ID));
+                metadata.setUserId(rs.getString(USER_DATA_ATTR_USER_ID));
+                metadata.setActionValue(rs.getString(USER_DATA_ATTR_ACTION_VAUE));
+                metadata.setActionType(rs.getString(USER_DATA_ATTR_ACTION_TYPE));
+
+                metadatas.add(metadata);
+
+            }
+
+        }
+        catch (SQLException e)
+        {
+
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (con != null) con.close();
+            }
+            catch(SQLException e)
+            {
+                System.err.println(e.getMessage());
+            }
+        }
+        return metadatas;
     }
 }
