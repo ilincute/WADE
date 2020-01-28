@@ -1,34 +1,34 @@
 package com.regauth.raservice;
 
+import com.regauth.data.User;
+import com.regauth.facades.UserFacade;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/ra")
 public class LoginController
 {
-    @PostMapping("/register")
-    public String tryRegister(
-            @RequestParam(value = "userName") String userName,
-            @RequestParam(value = "lastName") String lastName,
-            @RequestParam(value = "email") String email,
-            @RequestParam(value = "password") String password)
+
+    @RequestMapping(path = "/authenticate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<String> authenticate(
+            @RequestParam(name = "uerName") String userName,
+            @RequestParam(name = "password") String password)
     {
-        System.out.println(userName);
-        System.out.println(lastName);
-        System.out.println(email);
-        System.out.println(password);
 
-        return "hello";
+        User currentUser = UserFacade.authenticate(userName, password);
+        if (currentUser != null)
+        {
+            return new ResponseEntity<String>("", HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>("", HttpStatus.CONFLICT);
     }
-
-    @RequestMapping(path = "/sayHello", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> hello()
-    {
-        return new ResponseEntity<>(null, HttpStatus.OK);
-    }
-
 }
