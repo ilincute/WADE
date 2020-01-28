@@ -108,13 +108,6 @@ body > * {
           justify-content: center;
 }
 
-.main .canvas-one {
-    border-radius: 10px;
-    height: 30px;
-    width: 30%;
-    border-style: solid grey;
-}
- 
 .title-section {
   margin-left: auto;
   margin-right: auto;
