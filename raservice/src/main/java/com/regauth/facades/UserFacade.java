@@ -34,4 +34,9 @@ public class UserFacade
         return null;
     }
 
+    public static String getSessionTokenFor(User user)
+    {
+        return "";
+    }
+
 }
