@@ -1,11 +1,11 @@
 package com.regauth.data;
 
 public class User {
-    public String id;
-    public String userName;
-    public String lastName;
-    public String email;
-    public String password;
+    private String id;
+    private String userName;
+    private String lastName;
+    private String email;
+    private String password;
 
 
     public String getId() {
