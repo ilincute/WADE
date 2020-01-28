@@ -10,7 +10,7 @@ public class UserDAO
     }
 
 
-    public static User retrieve()
+    public static User getForUsername(String username)
     {
         return null;
     }
