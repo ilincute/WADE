@@ -31,4 +31,10 @@ public class TokenDAOTest
 
         assertEquals(null, ex);
     }
+
+    @Test
+    void testGet()
+    {
+        assertEquals(true, TokenDAO.doesExist("4f0dccea-aac9-4cec-b411-83a7cdb79b64"));
+    }
 }
