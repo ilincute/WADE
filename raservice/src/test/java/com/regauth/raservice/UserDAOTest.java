@@ -33,4 +33,17 @@ public class UserDAOTest
 
         assertEquals(null, ex);
     }
+
+
+    @Test
+    void testGet()
+    {
+        User user = UserDAO.getForUsername("foo");
+        assertEquals(user.getId(), "sdasd");
+        assertEquals(user.getUserName(),"foo" );
+        assertEquals(user.getLastName(),"vasile" );
+        assertEquals(user.getEmail(), "foo@foo.fo");
+        assertEquals(user.getPassword(), "s3cr3t");
+
+    }
 }
