@@ -19,7 +19,7 @@ public class LoginController
     @RequestMapping(path = "/authenticate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<User> authenticate(
-            @RequestParam(name = "uerName") String userName,
+            @RequestParam(name = "userName") String userName,
             @RequestParam(name = "password") String password)
     {
 
