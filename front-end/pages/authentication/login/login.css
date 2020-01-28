@@ -77,8 +77,6 @@ body > * {
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
-  background-color: #FBDA61;
-  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
   padding-top: 1px;
   margin-top: -1px;
   display: -webkit-box;
@@ -108,94 +106,35 @@ body > * {
           justify-content: center;
 }
 
-.main .canvas-one {
-    border-radius: 10px;
-    height: 30px;
-    width: 30%;
-    border-style: solid grey;
-}
- 
-.title-section {
-  margin-left: auto;
-  margin-right: auto;
+.menu {
   width: 100%;
-  height: 50px;
+}
+
+.menu .pages {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #f3f3f3;
 }
 
-.title-section .title {
-  color: #333333;
-  font-size: 25px;
-}
-
-.second-canvas {
-  margin-top: 10px;
-  width: 60%;
-  max-width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(255, 255, 255, 0.6);
-  color: black;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-}
-
-.second-canvas .element {
+.menu .pages .item {
+  padding: 15px 7px;
+  width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
 }
 
-.second-canvas .element:hover {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7);
+.menu .pages .item:not(:last-child) {
+  border-right: 1px solid #f3f3f3;
 }
 
-.second-canvas .element:nth-child(1):hover {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+.menu .pages .select {
+  background-color: #f3f3f3;
 }
-
-.second-canvas .element:last-child:hover {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.buttons {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-bottom: 40px;
-}
-/*# sourceMappingURL=language.css.map */
+/*# sourceMappingURL=homepage.css.map */
