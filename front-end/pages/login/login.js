@@ -44,8 +44,10 @@ function login() {
     .then(response => {
         return response.json();
     }).then(function (data) {
+        console.log(data);
         setCookie("token", data.token, 2);
         setCookie("userId", data.userId, 2);
+        setCookie("userName", data.username, 2);
     }).catch((error) => {
         console.log(error);
     })
