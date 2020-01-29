@@ -17,6 +17,7 @@ app.use(express.static("pages/sign-up"));
 app.use(express.static("pages/museums"));
 app.use(express.static("pages/floor-plan"));
 app.use(express.static("pages/search"));
+app.use(express.static("pages/art-museum"));
 
 app.get('/welcome', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/welcome/welcome.html'));
@@ -58,6 +59,13 @@ app.get('/login', function(req,res) {
 
 app.get('/museums', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/museums/museums.html'));
+});
+
+
+// ---------------- Art museum -------------------
+
+app.get('/art-museum', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/art-museum/art-museum.html'));
 });
 
 
