@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Museums</title>
+        <title>Languages-Page</title>
         <link href="./museums.css" rel="stylesheet"></link>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body onload="onLoad()">
+    <body onload="initLanguage()">
         <div class="content">
-            
             <div class="main">
-                <h2>1st Floor</h2>
-            
-                <div class="block-display">
-                    <div class="parallelogram"><a href="E:\Master\WADe\Git-repo\front-end\pages\art-museum\art-museum.html">Art</a></div><div class="parallelogram"><a href="E:\Master\WADe\Git-repo\front-end\pages\ethnographic-museum\ethnographic-museum.html">Ethnographic</a></div>
+                <h1 class="title">Floor plan</h1>
+                <div class="museums">
+                    <h2 class="subtitle">1st Floor</h2>
+                    <div class="block-display">
+                        <div onclick="window.location.href = '/homepage'" class="parallelogram">Art</div>
+                        <div onclick="window.location.href = '/homepage'" class="parallelogram">Ethnographic</div>
+                    </div>
+        
+                    <h2 class="subtitle">Ground Floor</h2>
+                    <div class="block-display">
+                        <div class="parallelogram">History</div>
+                        <div class="parallelogram">Science</div>
+                    </div>
                 </div>
-    
-                <hr class="style1">
-                <br>
-                    <h2>Ground Floor</h2>
-                <div class="block-display">
-                    <div class="parallelogram"><a href="E:\Master\WADe\Git-repo\front-end\pages\history-museum\history-museum.html">History</a></div><div class="parallelogram"><a href="E:\Master\WADe\Git-repo\front-end\pages\science-museum\science-museum.html">Science</a></div>
-                </div>
-                    
-                </div>
+                
+            </div>
             <nav class="menu">
                 <ul class="pages">
                     <li class="item" onclick="window.location.href = '/homepage'"><img class="icon" src="/home-icon.png"></img>Home</li>
-                    <li class="item" onclick="window.location.href = '/floor-plan'"><img class="icon" src="/floor-plan-icon.png"></img>Floor plan</li>
                     <li class="item select" onclick="window.location.href = '/museums'"><img class="icon" src="/museum-icon.png">Museums</li>
                     <li class="item" onclick="window.location.href = '/search'"><img class="icon" src="/search-icon.png">Search</li>
                     <li class="item" onclick="window.location.href = '/me'"><img class="icon" src="/account-icon.png">Me</li>

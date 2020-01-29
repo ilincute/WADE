@@ -18,22 +18,23 @@
             <div class="main">
                 <h1 class="title">Sign-up</h1>
                 <div class="field">
-                    <!-- <h2 class="title">Email</h2> -->
-                    <input type="email" class="form-control input-rounded" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                    <input id="email" type="email" class="form-control input-rounded" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="field">
-                    <!-- <h2 class="title">Password</h2> -->
-                    <input type="password" class="form-control input-rounded" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                    <input id="userName" type="text" class="form-control input-rounded" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="field">
-                    <!-- <h2 class="title">Password</h2> -->
-                    <input type="password" class="form-control input-rounded" placeholder="Repeat password" aria-label="Username" aria-describedby="basic-addon1">
+                    <input id="fullName" type="text" class="form-control input-rounded" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="field">
+                    <input id="password" type="password" class="form-control input-rounded" placeholder="Repeat password" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="field flex-end">
-                    <button class="button">
+                    <button onclick="signup()" class="button">
                         Submit
                     </button>
                 </div>

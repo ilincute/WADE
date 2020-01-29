@@ -96,7 +96,7 @@ input.input-rounded {
 
 .menu .pages .item {
   padding: 10px 7px;
-  width: 60px;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 11px;
@@ -149,9 +149,12 @@ body > * {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main {
@@ -164,33 +167,67 @@ body > * {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-image: url("/museum-house.svg");
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-bottom: 25px;
+}
+
+.main .museums {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .title {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 20px;
+  margin: 20px auto;
+}
+
+.main .subtitle {
+  font-size: 17px;
+  padding: 20px;
+}
+
+.parallelogram {
+  border: 2px solid #f3f3f3;
+  width: 130px;
+  height: 65px;
+  -webkit-transform: skew(160deg);
+          transform: skew(160deg);
+  background: white;
+  margin: 1em;
+  margin-left: 8%;
+  color: #333333;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.main .divider {
-  margin: 15px;
-  font-size: 17px;
-  color: #333333;
-}
-
-.parallelogram {
-  border: 2px solid #cead78;
-  width: 130px;
-  height: 65px;
-  -webkit-transform: skew(160deg);
-          transform: skew(160deg);
-  background: #003153;
-  margin: 1em;
-  margin-left: 8%;
-  -webkit-box-shadow: 10px 10px 5px grey;
-          box-shadow: 10px 10px 5px grey;
-  color: #cead78;
-  text-align: center;
+  -webkit-box-shadow: 10px 13px 6px 1px #d4d4d4;
+  box-shadow: 10px 13px 6px 1px #d4d4d4;
 }
 
 .block-display {
@@ -203,19 +240,12 @@ body > * {
   padding: 100px;
 }
 
-hr.style1 {
+.line {
   border: none;
-  width: 80%;
+  width: 65%;
   padding: 10%;
   margin-top: 0;
-  border-bottom: 1px solid #1f1209;
-  -webkit-box-shadow: 0 20px 20px -20px #333;
-          box-shadow: 0 20px 20px -20px #333;
+  border-bottom: 1px solid #a0a0a0;
   margin: -50px auto 10px;
-}
-
-a {
-  color: #cead78;
-  text-decoration: none;
 }
 /*# sourceMappingURL=museums.css.map */
