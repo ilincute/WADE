@@ -78,58 +78,6 @@ input.input-rounded {
   min-width: 80%;
 }
 
-.menu {
-  width: 100%;
-  background-color: white;
-}
-
-.menu .pages {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 1px solid #f3f3f3;
-}
-
-.menu .pages .item {
-  padding: 10px 7px;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 11px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.menu .pages .item .icon {
-  width: 20px;
-  height: 20px;
-  padding-bottom: 5px;
-}
-
-.menu .pages .item:not(:last-child) {
-  border-right: 1px solid #f3f3f3;
-}
-
-.menu .pages .select {
-  background-color: #f3f3f3;
-}
-
 body > * {
   font-family: 'Roboto', sans-serif;
 }
@@ -139,7 +87,6 @@ body > * {
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
-  background-color: #f3f3f3;
   padding-top: 1px;
   margin-top: -1px;
   display: -webkit-box;
@@ -167,86 +114,43 @@ body > * {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 10%;
   margin-right: 10%;
-  background-image: url("/museum-house.svg");
-  background-size: 250px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  margin-bottom: 25px;
 }
 
-.main .museums {
+.menu {
   width: 100%;
-  height: 50%;
+}
+
+.menu .pages {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #f3f3f3;
 }
 
-.main .title {
-  font-size: 20px;
-  font-weight: 900;
-  margin: 20px;
-  margin: 20px auto;
+.menu .pages .item {
+  padding: 15px 7px;
+  width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  text-align: center;
 }
 
-.main .subtitle {
-  font-size: 17px;
-  padding: 20px;
+.menu .pages .item:not(:last-child) {
+  border-right: 1px solid #f3f3f3;
 }
 
-.parallelogram {
-  border: 2px solid #f3f3f3;
-  width: 130px;
-  height: 65px;
-  -webkit-transform: skew(160deg);
-          transform: skew(160deg);
-  background: white;
-  margin: 1em;
-  margin-left: 8%;
-  color: #333333;
-  border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 10px 13px 6px 1px #d4d4d4;
-  box-shadow: 10px 13px 6px 1px #d4d4d4;
-}
-
-.block-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.h2 {
-  padding: 100px;
-}
-
-.line {
-  border: none;
-  width: 65%;
-  padding: 10%;
-  margin-top: 0;
-  border-bottom: 1px solid #a0a0a0;
-  margin: -50px auto 10px;
+.menu .pages .select {
+  background-color: #f3f3f3;
 }
 
 .parallelogram {
@@ -284,9 +188,4 @@ hr.style1 {
           box-shadow: 0 20px 20px -20px #333;
   margin: -50px auto 10px;
 }
-
-a {
-  color: #cead78;
-  text-decoration: none;
-}
-/*# sourceMappingURL=museums.css.map */
+/*# sourceMappingURL=map.css.map */

@@ -4,7 +4,6 @@
 @import '../../shared/styles/colors.scss';
 @import '../../shared/styles/buttons.scss';
 @import '../../shared/styles/menu.scss';
-
 body > * {
     font-family: 'Roboto', sans-serif;
 }
@@ -20,7 +19,8 @@ body > * {
     margin-top: -1px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 .main {
@@ -28,27 +28,55 @@ body > * {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url("/museum-house.svg");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
-    .divider {
-        margin: 15px;
+    margin-bottom: 25px;
+
+    .museums {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 900;
+        margin: 20px;
+        margin: 20px auto;
+    }
+
+    .subtitle {
         font-size: 17px;
-        color: $text-black;
+        padding: 20px;
     }
 }
 
 .parallelogram {
-    border: 2px solid #cead78;
+    border: 2px solid $border-black;
     width: 130px;
     height: 65px;
     transform: skew(160deg);
-    background: #003153;
+    background: white;
     margin: 1em;
     margin-left: 8%;
-    box-shadow: 10px 10px 5px grey;
-    color: #cead78;
-    text-align: center;
+    color: $text-black;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-box-shadow: 10px 13px 6px 1px rgba(212,212,212,1);
+    -moz-box-shadow: 10px 13px 6px 1px rgba(212,212,212,1);
+    box-shadow: 10px 13px 6px 1px rgba(212,212,212,1);
   }
   
   .block-display {
@@ -59,17 +87,12 @@ body > * {
       padding: 100px;
   }
 
-  hr.style1 {
+  .line {
     border:none;
-    width: 80%;
+    width: 65%;
     padding: 10%;
     margin-top: 0;
-    border-bottom: 1px solid #1f1209;
-    box-shadow: 0 20px 20px -20px #333;
+    border-bottom: 1px solid $border-gray;
     margin: -50px auto 10px; 
   }
 
-  a{
-      color: #cead78;
-      text-decoration: none;
-  }
