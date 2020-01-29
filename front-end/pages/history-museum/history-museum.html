@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>History-Museum</title>
+        <link href="./history-museum.css" rel="stylesheet"></link>
+        <link href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="initLanguage()">
+        <div class="content">
+            
+            <div class="main">
+                <div class="wrapper">
+                    <h1>History Museum</h1>
+                    <div class="cols">
+                              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/PC_Brosura__BT_-13_1.jpg'); background-position: 10% 10%;">
+                                          <div class="inner">
+                                              <p>Ticket prices</p>
+                                          </div>
+                                      </div>
+                                      <div class="back">
+                                          <div class="inner">
+                                            <table style="width:100%">
+                                                <tr>
+                                                  <td>Standard</td>
+                                                  <td>16 lei</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>50% off</td>
+                                                  <td>8 lei</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>75% off</td>
+                                                    <td>4 lei</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Free</td>
+                                                    <td>0 lei</td>
+                                                  </tr>
+                                              </table>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0053_1.jpg')">
+                                          <div class="inner">
+                                              <p>About</p>
+                                          </div>
+                                      </div>
+                                      <div class="back">
+                                          <div class="inner">
+                                              <p>The History Museum of Moldova in Iași was conceived as a pilot museum. The experience in its organization, in the first post-war years, was the basis for the establishment of most of the profile museums in Moldova.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col" onclick="window.location.href = ''">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0056_1.jpg')">
+                                          <div class="inner">
+                                              <p>Main Exhibitions</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/IMG_7795_1.jpg')">
+                                          <div class="inner">
+                                              <p>Temporary Exhibitions</p>
+                                          </div>
+                                      </div>
+                                      <div class="back">
+                                          <div class="inner">
+                                              <p><b>29.11.2019 - 11.02.2020</b> <br> The exhibition “Fluent spaces. Maps of the Danube area, 1650-1800 ”</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+            </div>
+            <nav class="menu">
+                <ul class="pages">
+                    <li class="item" onclick="window.location.href = '/homepage'"><img class="icon" src="/home-icon.png"></img>Home</li>
+                    <li class="item" onclick="window.location.href = '/floor-plan'"><img class="icon" src="/floor-plan-icon.png"></img>Floor plan</li>
+                    <li class="item select" onclick="window.location.href = '/museums'"><img class="icon" src="/museum-icon.png">Museums</li>
+                    <li class="item" onclick="window.location.href = '/search'"><img class="icon" src="/search-icon.png">Search</li>
+                    <li class="item" onclick="window.location.href = '/me'"><img class="icon" src="/account-icon.png">Me</li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

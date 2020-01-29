@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Art-Museum</title>
+        <link href="./art-museum.css" rel="stylesheet"></link>
+        <link href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="initLanguage()">
+        <div class="content">
+            
+            <div class="main">
+                <div class="wrapper">
+                    <h1>Art Museum</h1>
+                    <div class="cols">
+                              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/Untitled-1_1.jpg'); background-position: 10% 10%;">
+                                          <div class="inner">
+                                              <p>Ticket prices</p>
+                                          </div>
+                                      </div>
+                                      <div class="back">
+                                          <div class="inner">
+                                            <table style="width:100%">
+                                                <tr>
+                                                  <td>Standard</td>
+                                                  <td>16 lei</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>50% off</td>
+                                                  <td>8 lei</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>75% off</td>
+                                                    <td>4 lei</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Free</td>
+                                                    <td>0 lei</td>
+                                                  </tr>
+                                              </table>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0045_1.jpg')">
+                                          <div class="inner">
+                                              <p>About</p>
+                                          </div>
+                                      </div>
+                                      <div class="back">
+                                          <div class="inner">
+                                              <p>October 26, 1860 is a memorable date for the Art Museum of Iasi. It is the birth date of the first institution of this kind in the United Romanian Principalities.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0038_1.jpg')">
+                                          <div class="inner">
+                                              <p>Main Exhibitions</p>
+                                          </div>
+                                      </div>
+                                      <div class="back">
+                                          <div class="inner">
+                                              <ul>
+                                                  <li>"The masters of Romanian interwar art in the collections of the Iași Art Museum"</li>
+                                                  <li>"The masters of Romanian painting in the patrimony of the Iași Art Museum"</li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                  <div class="container">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0037_1.jpg')">
+                                          <div class="inner">
+                                              <p>Temporary Exhibitions</p>
+                                          </div>
+                                      </div>
+                                      <div class="back">
+                                          <div class="inner">
+                                              <p><b>03.12.2019 - 31.01.2020</b> <br> "Dan Hatmanu - In Memoriam", exhibition of painting, graphics and spatial structures from the collection of the Iași Art Museum</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+            </div>
+            <nav class="menu">
+                <ul class="pages">
+                    <li class="item" onclick="window.location.href = '/homepage'"><img class="icon" src="/home-icon.png"></img>Home</li>
+                    <li class="item" onclick="window.location.href = '/floor-plan'"><img class="icon" src="/floor-plan-icon.png"></img>Floor plan</li>
+                    <li class="item select" onclick="window.location.href = '/museums'"><img class="icon" src="/museum-icon.png">Museums</li>
+                    <li class="item" onclick="window.location.href = '/search'"><img class="icon" src="/search-icon.png">Search</li>
+                    <li class="item" onclick="window.location.href = '/me'"><img class="icon" src="/account-icon.png">Me</li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>
