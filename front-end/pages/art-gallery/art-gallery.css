@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body > * {
+  font-family: 'Karla', sans-serif;
+}
+
+.margin-right-30 {
+  margin-right: 30px;
+}
+
+input.input-rounded {
+  border: none;
+  border-radius: 15px;
+}
+
+.button {
+  border: none;
+  padding: 10px 20px;
+  min-width: 50px;
+  background-color: white;
+  border-radius: 23px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-large {
+  min-width: 80%;
+}
+
+.menu {
+  width: 100%;
+  background-color: white;
+}
+
+.menu .pages {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #f3f3f3;
+}
+
+.menu .pages .item {
+  padding: 10px 7px;
+  width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .pages .item .icon {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 5px;
+}
+
+.menu .pages .item:not(:last-child) {
+  border-right: 1px solid #f3f3f3;
+}
+
+.menu .pages .select {
+  background-color: #f3f3f3;
+}
+
+body > * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #f3f3f3;
+  padding-top: 1px;
+  margin-top: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .divider {
+  margin: 15px;
+  font-size: 17px;
+  color: #333333;
+}
+
+.parallelogram {
+  border: 2px solid #cead78;
+  width: 130px;
+  height: 65px;
+  -webkit-transform: skew(160deg);
+          transform: skew(160deg);
+  background: #003153;
+  margin: 1em;
+  margin-left: 8%;
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
+  color: #cead78;
+  text-align: center;
+}
+
+.block-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.h2 {
+  padding: 100px;
+}
+
+hr.style1 {
+  border: none;
+  width: 80%;
+  padding: 10%;
+  margin-top: 0;
+  border-bottom: 1px solid #1f1209;
+  -webkit-box-shadow: 0 20px 20px -20px #333;
+          box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px;
+}
+
+a {
+  color: #cead78;
+  text-decoration: none;
+}
+
+.c-hero-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 960px) {
+  .c-hero-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .c-hero-flex__item {
+    width: 100%;
+  }
+}
+
+.c-hero-flex__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+  cursor: pointer;
+}
+
+@media (min-width: 961px) {
+  .c-hero-flex__item {
+    height: 100%;
+  }
+}
+
+.c-hero-flex__item:hover {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.c-hero-flex__item:nth-child(1) {
+  background: #222 url(https://i.imgur.com/z9OpLz9.png) no-repeat center center;
+}
+
+.c-hero-flex__item:nth-child(2) {
+  background: #222 url(https://i.imgur.com/sHoNoXP.jpg) no-repeat center center;
+}
+
+.c-hero-flex__item:nth-child(3) {
+  background: #222 url(https://i.imgur.com/oA3GC3B.jpg) no-repeat center center;
+}
+
+.c-hero-flex__item:nth-child(4) {
+  background: #222 url(https://i.imgur.com/Po4XQrg.jpg) no-repeat center center;
+}
+
+.c-hero-flex__title {
+  text-transform: uppercase;
+  letter-spacing: .075em;
+  color: #fff;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+/*# sourceMappingURL=art-gallery.css.map */

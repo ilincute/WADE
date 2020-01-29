@@ -58,6 +58,11 @@ body > * {
   margin-right: 30px;
 }
 
+input.input-rounded {
+  border: none;
+  border-radius: 15px;
+}
+
 .button {
   border: none;
   padding: 10px 20px;
@@ -66,6 +71,11 @@ body > * {
   border-radius: 23px;
   outline: none;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.button-large {
+  min-width: 80%;
 }
 
 body > * {
@@ -326,4 +336,4 @@ h1 {
     margin: 0 0 2rem 0;
   }
 }
-/*# sourceMappingURL=ethnographic-museum.css.map */
+/*# sourceMappingURL=history-museum.css.map */
