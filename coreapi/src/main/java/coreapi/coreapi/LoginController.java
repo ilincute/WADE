@@ -1,5 +1,6 @@
 package coreapi.coreapi;
 
+import coreapi.coreapi.dao.LoginResponse;
 import coreapi.coreapi.dao.TokenDAO;
 import coreapi.coreapi.services.TokenService;
 import org.springframework.http.HttpStatus;
@@ -16,17 +17,18 @@ public class LoginController
     @CrossOrigin(origins = "*")
     @RequestMapping(path = "/authenticate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity<String> login(
+    public ResponseEntity<LoginResponse> login(
             @RequestParam(name = "userName") String userName,
             @RequestParam(name = "password") String password)
     {
-        String token = TokenService.getTokenForUser(userName, password);
-        if (token != null)
+        LoginResponse lr = TokenService.getTokenForUser(userName, password);
+        if (lr.getStatus().equals("valid"))
         {
-            return new ResponseEntity<String>(token, HttpStatus.OK);
+
+            return new ResponseEntity<>(lr, HttpStatus.OK);
         }
 
-        return new ResponseEntity<>("", HttpStatus.CONFLICT);
+        return new ResponseEntity<>(lr, HttpStatus.CONFLICT);
     }
 
 }

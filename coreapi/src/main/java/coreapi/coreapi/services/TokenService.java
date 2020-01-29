@@ -1,5 +1,6 @@
 package coreapi.coreapi.services;
 
+import coreapi.coreapi.dao.LoginResponse;
 import coreapi.coreapi.dao.TokenDAO;
 import coreapi.coreapi.data.User;
 import org.apache.commons.io.IOUtils;
@@ -28,8 +29,9 @@ public class TokenService
         return TokenDAO.doesExist(token);
     }
 
-    public static String getTokenForUser(String username, String password)
+    public static LoginResponse getTokenForUser(String username, String password)
     {
+        LoginResponse lr = new LoginResponse();;
         try
         {
             String token = UUID.randomUUID().toString();
@@ -37,19 +39,24 @@ public class TokenService
 
             if (user.getUserName().equals("fail"))
             {
-                return null;
+                lr.setStatus("invalid");
+                return lr;
             }
 
             TokenDAO.addForUser(user.getId(), token);
+            lr.setToken(token);
+            lr.setStatus("valid");
+            lr.setUserId(user.getId());
+            return lr;
 
-            return token;
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
 
-        return null;
+        lr.setStatus("invalid");
+        return lr;
     }
 
     private static User helperGetUser(String username, String password) throws IOException
