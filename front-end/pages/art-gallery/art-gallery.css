@@ -96,7 +96,7 @@ input.input-rounded {
 
 .menu .pages .item {
   padding: 10px 7px;
-  width: 60px;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 11px;
@@ -301,5 +301,10 @@ a {
   -webkit-transition: .2s all;
   transition: .2s all;
   font-size: small;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 /*# sourceMappingURL=art-gallery.css.map */
