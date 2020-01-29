@@ -1,9 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import '../../shared/styles/shared.scss';
-@import '../../shared/styles/colors.scss';
-@import '../../shared/styles/buttons.scss';
-@import '../../shared/styles/menu.scss';
+@import '../../../../shared/styles/shared.scss';
+@import '../../../../shared/styles/colors.scss';
+@import '../../../../shared/styles/buttons.scss';
+@import '../../../../shared/styles/menu.scss';
 
 body > * {
     font-family: 'Roboto', sans-serif;
@@ -112,19 +112,19 @@ body > * {
       }
       
       &:nth-child(1) {
-        background: #222 url(https://i.imgur.com/oAZspHI.jpg) no-repeat center center;
+        background: #222 url(https://i.imgur.com/foBuxUf.jpg) no-repeat center center;
       }
-      
+
       &:nth-child(2) {
-        background: #aca093 url(https://i.imgur.com/Lu6kI5S.jpg) no-repeat center center;
+        background: #aca093 url(https://i.imgur.com/wZnSQTP.jpg) no-repeat center center;
       }
-      
+
       &:nth-child(3) {
-        background: #222 url(https://i.imgur.com/9y5rFV4.jpg) no-repeat center center;
+        background: #222 url(https://i.imgur.com/s6aBtRj.jpg) no-repeat center center;
       }
 
       &:nth-child(4) {
-        background: #222 url(https://i.imgur.com/WlSFW9q.jpg) no-repeat center center;
+        background: #222 url(https://i.imgur.com/b61dr52.jpg) no-repeat center center;
       }
     }
     
@@ -137,7 +137,8 @@ body > * {
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
-    filter: invert(1);
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+  margin-left: auto;
 }

@@ -280,19 +280,19 @@ a {
 }
 
 .c-hero-flex__item:nth-child(1) {
-  background: #222 url(https://i.imgur.com/foBuxUf.jpg) no-repeat center center;
+  background: #222 url(https://i.imgur.com/oAZspHI.jpg) no-repeat center center;
 }
 
 .c-hero-flex__item:nth-child(2) {
-  background: #aca093 url(https://i.imgur.com/wZnSQTP.jpg) no-repeat center center;
+  background: #aca093 url(https://i.imgur.com/Lu6kI5S.jpg) no-repeat center center;
 }
 
 .c-hero-flex__item:nth-child(3) {
-  background: #222 url(https://i.imgur.com/s6aBtRj.jpg) no-repeat center center;
+  background: #222 url(https://i.imgur.com/9y5rFV4.jpg) no-repeat center center;
 }
 
 .c-hero-flex__item:nth-child(4) {
-  background: #222 url(https://i.imgur.com/b61dr52.jpg) no-repeat center center;
+  background: #222 url(https://i.imgur.com/WlSFW9q.jpg) no-repeat center center;
 }
 
 .c-hero-flex__title {
@@ -304,9 +304,9 @@ a {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+  margin-left: auto;
 }
-/*# sourceMappingURL=etno-gallery.css.map */
+/*# sourceMappingURL=history-gallery.css.map */

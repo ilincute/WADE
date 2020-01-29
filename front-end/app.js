@@ -23,6 +23,11 @@ app.use(express.static("pages/museums/history-museum"));
 app.use(express.static("pages/museums/science-museum"));
 app.use(express.static("pages/museums/exhibit-qr-code"));
 app.use(express.static("pages/buy-ticket"));
+app.use(express.static("pages/museum/art-museum/art-gallery"));
+app.use(express.static("pages/museum/ethnographic-museum/ethnographic-gallery"));
+app.use(express.static("pages/museum/history-museum/history-gallery"));
+app.use(express.static("pages/museum/science-museum/science-gallery"));
+
 
 
 app.get('/welcome', function(req,res) {
@@ -116,6 +121,32 @@ app.get('/exhibit-qr-code', function(req,res) {
 app.get('/buy-ticket', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/buy-ticket/buy-ticket.html'));
 });
+
+// ---------------- Art gallery -------------------
+
+app.get('/art-gallery', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/art-museum/art-gallery/art-gallery.html'));
+});
+
+
+// ---------------- Ethnographic gallery -------------------
+
+app.get('/ethnographic-gallery', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/ethnographic-museum/ethnographic-gallery/ethnographic-gallery.html'));
+});
+
+// ---------------- History gallery -------------------
+
+app.get('/history-gallery', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/history-museum/history-gallery/history-gallery.html'));
+});
+
+// ---------------- Science gallery -------------------
+
+app.get('/science-gallery', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/science-museum/science-gallery/science-gallery.html'));
+});
+
 
 app.post('/login', function (req, res) {
     // we'll replace this with calls to the apis
