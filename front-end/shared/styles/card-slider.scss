@@ -1,52 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import '../../shared/styles/shared.scss';
-@import '../../shared/styles/colors.scss';
-@import '../../shared/styles/buttons.scss';
-@import '../../shared/styles/menu.scss';
-
-body > * {
-    font-family: 'Roboto', sans-serif;
-}
-
-.content { 
-  width: 100vw;
-  height: 100vh;
-  max-width:100%;
-  max-height: 100%;
-  background-color: $background-gray;
-  // background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
-  padding-top: 1px;
-  margin-top: -1px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.main {
-  display: flex;
-  width: 100%;
-  height: calc(100% - 57px);
-  
-  flex-direction: column;
-
-  .title {
-      font-size: 20px;
-      font-weight: 900;
-      color: $text-black;
-      margin: 20px 0px;
-      padding: 0px 20px;
-  }
-}
-
-// *{
-//     margin: 0;
-//     padding: 0;
-//     -webkit-box-sizing: border-box;
-//             box-sizing: border-box;
-//   }
-  
-  h1{
+h1{
     font-size: 1rem;
     font-weight: normal;
     color: #444;
@@ -106,9 +58,9 @@ body > * {
   
   .back{
     background: #cedce7;
-    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-    background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-    background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    /* background: linear-gradient(45deg, #cedce7 0%, #596a72 100%); */
+    background-color: #e6e6e6;
+    color: black;
   }
   
   .front:after{
@@ -170,6 +122,7 @@ body > * {
               transform: rotateY(0deg);
       -webkit-transform-style: preserve-3d;
               transform-style: preserve-3d;
+    width: 100%;
   }
   
   .container:hover .back{
@@ -187,22 +140,8 @@ body > * {
   }
   
   .front .inner p{
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 22px;
     position: relative;
-  }
-  
-  .front .inner p:after{
-    content: '';
-    width: 4rem;
-    height: 2px;
-    position: absolute;
-    background: #C6D4DF;
-    display: block;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: -.75rem;
   }
   
   .front .inner span{

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Science-Museum</title>
-        <link href="./science-museum.css" rel="stylesheet"></link>
+        <title>Ethnographic-Museum</title>
+        <link href="./ethnographic-museum.css" rel="stylesheet"></link>
         <link href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -11,12 +11,20 @@
         <div class="content">
             
             <div class="main">
+                <header class="header">
+                    <div class="back-button">
+                        <button onclick="window.location.href = '/museums'" class="button button-large">Back</button>
+                    </div>
+
+                    <h1 class="title">Ethnographic Museum</h1>
+                </header>
+
+          
                 <div class="wrapper">
-                    <h1>Science Museum</h1>
                     <div class="cols">
                               <div class="col" ontouchstart="this.classList.toggle('hover');">
                                   <div class="container">
-                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/PC_Brosura__BT_-18_1.jpg'); background-position: 10% 10%;">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/PC_Brosura__BT_-23_1.jpg'); background-position: 10% 10%;">
                                           <div class="inner">
                                               <p>Ticket prices</p>
                                           </div>
@@ -47,21 +55,21 @@
                               </div>
                               <div class="col" ontouchstart="this.classList.toggle('hover');">
                                   <div class="container">
-                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0s067_1.jpg')">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0016_1.jpg')">
                                           <div class="inner">
                                               <p>About</p>
                                           </div>
                                       </div>
                                       <div class="back">
                                           <div class="inner">
-                                              <p>Made up largely of donations and acquisitions, the "Stefan Procopiu" Museum of Science and Technology has developed and diversified its heritage, housing more than 11,000 objects today, values that are particularly important for the history of science and technology.</p>
+                                              <p>The Ethnographic Museum of Moldova was founded in 1943. The task of organizing the museum collections came to the lecturer Ion Chelcea, appointed by the Rectorate of the University "Al. I. Cuza ”at the department of ethnography.</p>
                                           </div>
                                       </div>
                                   </div>
                               </div>
                               <div class="col" onclick="window.location.href = ''">
                                   <div class="container">
-                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0066_1.jpg')">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0011_1.jpg')">
                                           <div class="inner">
                                               <p>Main Exhibitions</p>
                                           </div>
@@ -70,26 +78,28 @@
                               </div>
                               <div class="col" ontouchstart="this.classList.toggle('hover');">
                                   <div class="container">
-                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0071_1.jpg')">
+                                      <div class="front" style="background-image: url('https://palatulculturii.ro/web/upload/slider/MN_0010_1.jpg')">
                                           <div class="inner">
                                               <p>Temporary Exhibitions</p>
                                           </div>
                                       </div>
                                       <div class="back">
                                           <div class="inner">
-                                              <p><b>29.11.2019 - 07.01.2020</b> <br> The exhibition "Leonardo and science"</p>
+                                              <p><b>04.12.2019 - 31.01.2020</b> <br> "Temporary exhibition “Heritage Drawers”</p>
+                                              <p><b>30.10.2019 - 01.06.2020</b> <br> The exhibition “Grinding, walling, barking. Woven stories. ”</p>
                                           </div>
                                       </div>
                                   </div>
                               </div>
+                    </div>
+                </div>
             </div>
             <nav class="menu">
                 <ul class="pages">
-                    <li class="item" onclick="window.location.href = '/homepage'"><img class="icon" src="/home-icon.png"></img>Home</li>
-                    <li class="item" onclick="window.location.href = '/floor-plan'"><img class="icon" src="/floor-plan-icon.png"></img>Floor plan</li>
+                    <li class="item"><img class="icon" src="/home-icon.png"></img>Home</li>
                     <li class="item select" onclick="window.location.href = '/museums'"><img class="icon" src="/museum-icon.png">Museums</li>
                     <li class="item" onclick="window.location.href = '/search'"><img class="icon" src="/search-icon.png">Search</li>
-                    <li class="item" onclick="window.location.href = '/me'"><img class="icon" src="/account-icon.png">Me</li>
+                    <li class="item" onclick="window.location.href = '/me'"><img id="me-homepage" class="icon" src="/account-icon.png"></li>
                 </ul>
             </nav>
         </div>

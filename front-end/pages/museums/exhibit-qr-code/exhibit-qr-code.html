@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Languages-Page</title>
+        <link href="./exhibit-qr-code.css" rel="stylesheet"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="initLanguage()">
+        <div class="content">
+            <div class="main">
+                <h1 class="title">Scan QR code here</h1>
+            </div>
+            <nav class="menu">
+                <ul class="pages">
+                    <li class="item" onclick="window.location.href = '/homepage'"><img class="icon" src="/home-icon.png"></img>Home</li>
+                    <li class="item select" onclick="window.location.href = '/museums'"><img class="icon" src="/museum-icon.png">Museums</li>
+                    <li class="item" onclick="window.location.href = '/search'"><img class="icon" src="/search-icon.png">Search</li>
+                    <li class="item" onclick="window.location.href = '/me'"><img class="icon" src="/account-icon.png">Me</li>
+                </ul>
+            </nav>
+        </div>
+        <script src="exhibit-qr-code.js"></script>
+    </body>
+</html>

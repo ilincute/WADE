@@ -17,7 +17,12 @@ app.use(express.static("pages/sign-up"));
 app.use(express.static("pages/museums"));
 app.use(express.static("pages/floor-plan"));
 app.use(express.static("pages/search"));
-app.use(express.static("pages/art-museum"));
+app.use(express.static("pages/museums/art-museum"));
+app.use(express.static("pages/museums/ethnographic-museum"));
+app.use(express.static("pages/museums/history-museum"));
+app.use(express.static("pages/museums/science-museum"));
+app.use(express.static("pages/museums/exhibit-qr-code"));
+
 
 app.get('/welcome', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/welcome/welcome.html'));
@@ -65,7 +70,25 @@ app.get('/museums', function(req,res) {
 // ---------------- Art museum -------------------
 
 app.get('/art-museum', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/art-museum/art-museum.html'));
+    res.sendFile(path.join(__dirname+'/pages/museums/art-museum/art-museum.html'));
+});
+
+// ---------------- Ethnographic museum -------------------
+
+app.get('/ethnographic-museum', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/ethnographic-museum/ethnographic-museum.html'));
+});
+
+// ---------------- History museum -------------------
+
+app.get('/history-museum', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/history-museum/history-museum.html'));
+});
+
+// ---------------- Science museum -------------------
+
+app.get('/science-museum', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/science-museum/science-museum.html'));
 });
 
 
@@ -79,6 +102,12 @@ app.get('/sign-up', function(req,res) {
 
 app.get('/search', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/search/search.html'));
+});
+
+// ---------------- Exhibit QR Code -------------------
+
+app.get('/exhibit-qr-code', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/museums/exhibit-qr-code/exhibit-qr-code.html'));
 });
 
 app.post('/login', function (req, res) {
