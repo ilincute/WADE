@@ -78,11 +78,5 @@ app.get('/search', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/search/search.html'));
 });
 
-
-
-
-
-
-
-
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
