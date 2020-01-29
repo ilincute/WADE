@@ -253,13 +253,15 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: bottom left;
+      -ms-flex-pack: bottom left;
+          justify-content: bottom left;
   background-size: cover;
+  padding-bottom: 20px;
+  padding-left: 20px;
   -webkit-transition: .2s all;
   transition: .2s all;
   cursor: pointer;
@@ -282,7 +284,7 @@ a {
 }
 
 .c-hero-flex__item:nth-child(2) {
-  background: #222 url(https://i.imgur.com/sHoNoXP.jpg) no-repeat center center;
+  background: #aca093 url(https://i.imgur.com/sHoNoXP.jpg) no-repeat center center;
 }
 
 .c-hero-flex__item:nth-child(3) {
@@ -294,10 +296,10 @@ a {
 }
 
 .c-hero-flex__title {
-  text-transform: uppercase;
   letter-spacing: .075em;
   color: #fff;
   -webkit-transition: .2s all;
   transition: .2s all;
+  font-size: small;
 }
 /*# sourceMappingURL=art-gallery.css.map */
