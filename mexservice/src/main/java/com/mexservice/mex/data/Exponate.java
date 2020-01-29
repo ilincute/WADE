@@ -8,7 +8,7 @@ public class Exponate
     String Name;
     String image;
     List<ExponateData> datas;
-    
+
     public String getId() {
         return id;
     }
