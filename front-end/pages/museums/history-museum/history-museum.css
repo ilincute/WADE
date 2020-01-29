@@ -271,22 +271,8 @@ h1 {
 }
 
 .front .inner p {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 22px;
   position: relative;
-}
-
-.front .inner p:after {
-  content: '';
-  width: 4rem;
-  height: 2px;
-  position: absolute;
-  background: #C6D4DF;
-  display: block;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: -.75rem;
 }
 
 .front .inner span {
@@ -349,11 +335,47 @@ body > * {
           flex-direction: column;
 }
 
-.main .title {
+.main .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.main .header .back-button {
+  width: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.main .header .title {
+  margin-left: 50px;
   font-size: 20px;
   font-weight: 900;
   color: #333333;
   margin: 20px 0px;
   padding: 0px 20px;
+}
+
+.main .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main .buttons * {
+  margin: 10px 0px;
 }
 /*# sourceMappingURL=history-museum.css.map */

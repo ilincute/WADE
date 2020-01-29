@@ -22,6 +22,7 @@ app.use(express.static("pages/museums/ethnographic-museum"));
 app.use(express.static("pages/museums/history-museum"));
 app.use(express.static("pages/museums/science-museum"));
 app.use(express.static("pages/museums/exhibit-qr-code"));
+app.use(express.static("pages/buy-ticket"));
 
 
 app.get('/welcome', function(req,res) {
@@ -108,6 +109,12 @@ app.get('/search', function(req,res) {
 
 app.get('/exhibit-qr-code', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/museums/exhibit-qr-code/exhibit-qr-code.html'));
+});
+
+// ---------------- Buy-ticket -------------------
+
+app.get('/buy-ticket', function(req,res) {
+    res.sendFile(path.join(__dirname+'/pages/buy-ticket/buy-ticket.html'));
 });
 
 app.post('/login', function (req, res) {
