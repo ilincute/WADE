@@ -48,7 +48,7 @@ public class TokenService
             lr.setStatus("valid");
             lr.setUserId(user.getId());
             lr.setUserName(user.getUserName());
-            
+
             return lr;
 
         }
