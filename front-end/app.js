@@ -78,5 +78,18 @@ app.get('/search', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/search/search.html'));
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.post('/login', function (req, res) {
+    // we'll replace this with calls to the apis
+    var post = req.body;
+    if (post.user === 'john' && post.password === 'johnspassword') {
+        req.session.user_id = johns_user_id_here;
+        res.redirect('/homepage');
+    } else {
+        res.send('Bad user/pass');
+    }
+});
 
+
+
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
