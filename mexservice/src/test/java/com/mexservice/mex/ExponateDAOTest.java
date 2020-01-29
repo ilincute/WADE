@@ -5,7 +5,10 @@ import com.mexservice.mex.data.Exponate;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @SpringBootTest
 public class ExponateDAOTest
@@ -29,6 +32,13 @@ public class ExponateDAOTest
         }
 
         assertEquals(null, ex);
+    }
+
+    @Test
+    void testGetAll()
+    {
+        List<Exponate> exponates = ExponateDAO.getAll();
+        assertNotEquals(null, exponates);
     }
 
 }
