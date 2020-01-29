@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <link href="./homepage.css" rel="stylesheet"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="initLanguage()">
+        <div class="content">
+            
+            <div class="main">
+                <h1 class="title">Palace of Culture Guide</h1>
+                <div class="cards">
+                    <div class="card">
+                        About the place
+                    </div class="card">
+
+                    <div class="card">
+                        About the place
+                    </div class="card">
+
+                    <div class="card">
+                        About the place
+                    </div class="card">
+                </div>
+            </div>
+            <nav class="menu">
+                <ul class="pages">
+                    <li class="item select"><img class="icon" src="/home-icon.png"></img>Home</li>
+                    <li class="item" onclick="window.location.href = '/floor-plan'"><img class="icon" src="/floor-plan-icon.png"></img>Floor plan</li>
+                    <li class="item" onclick="window.location.href = '/museums'"><img class="icon" src="/museum-icon.png">Museums</li>
+                    <li class="item" onclick="window.location.href = '/search'"><img class="icon" src="/search-icon.png">Search</li>
+                    <li class="item" onclick="window.location.href = '/me'"><img class="icon" src="/account-icon.png">Me</li>
+                </ul>
+            </nav>
+        </div>
+        <script src="homepage.js"></script>
+    </body>
+</html>

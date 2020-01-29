@@ -1,0 +1,39 @@
+.menu {
+    width: 100%;
+    background-color: white;
+
+    .pages {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $border-black;
+
+        .item {
+            padding: 10px 7px;
+            width: 60px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 11px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                padding-bottom: 5px;
+            }
+        }
+
+        .item:not(:last-child) {
+            border-right: 1px solid $border-black;
+        }
+
+        .select {
+            background-color: $border-black;
+        }
+    }
+}
