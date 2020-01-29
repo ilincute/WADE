@@ -16,6 +16,7 @@ app.use(express.static("pages/login"));
 app.use(express.static("pages/sign-up"));
 app.use(express.static("pages/museums"));
 app.use(express.static("pages/floor-plan"));
+app.use(express.static("pages/search"));
 
 app.get('/welcome', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/welcome/welcome.html'));
@@ -64,12 +65,6 @@ app.get('/museums', function(req,res) {
 
 app.get('/sign-up', function(req,res) {
     res.sendFile(path.join(__dirname+'/pages/sign-up/sign-up.html'));
-});
-
-// ---------------- Floor-Plan -------------------
-
-app.get('/floor-plan', function(req,res) {
-    res.sendFile(path.join(__dirname+'/pages/floor-plan/floor-plan.html'));
 });
 
 // ---------------- Search -------------------
