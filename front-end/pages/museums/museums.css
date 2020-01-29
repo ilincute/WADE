@@ -58,6 +58,11 @@ body > * {
   margin-right: 30px;
 }
 
+input.input-rounded {
+  border: none;
+  border-radius: 15px;
+}
+
 .button {
   border: none;
   padding: 10px 20px;
@@ -66,7 +71,7 @@ body > * {
   border-radius: 23px;
   outline: none;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .button-large {
@@ -171,5 +176,46 @@ body > * {
   margin: 15px;
   font-size: 17px;
   color: #333333;
+}
+
+.parallelogram {
+  border: 2px solid #cead78;
+  width: 130px;
+  height: 65px;
+  -webkit-transform: skew(160deg);
+          transform: skew(160deg);
+  background: #003153;
+  margin: 1em;
+  margin-left: 8%;
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
+  color: #cead78;
+  text-align: center;
+}
+
+.block-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.h2 {
+  padding: 100px;
+}
+
+hr.style1 {
+  border: none;
+  width: 80%;
+  padding: 10%;
+  margin-top: 0;
+  border-bottom: 1px solid #1f1209;
+  -webkit-box-shadow: 0 20px 20px -20px #333;
+          box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px;
+}
+
+a {
+  color: #cead78;
+  text-decoration: none;
 }
 /*# sourceMappingURL=museums.css.map */

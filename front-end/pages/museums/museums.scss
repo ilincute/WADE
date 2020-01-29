@@ -38,3 +38,38 @@ body > * {
     }
 }
 
+.parallelogram {
+    border: 2px solid #cead78;
+    width: 130px;
+    height: 65px;
+    transform: skew(160deg);
+    background: #003153;
+    margin: 1em;
+    margin-left: 8%;
+    box-shadow: 10px 10px 5px grey;
+    color: #cead78;
+    text-align: center;
+  }
+  
+  .block-display {
+    display: flex;
+  }
+
+  .h2 {
+      padding: 100px;
+  }
+
+  hr.style1 {
+    border:none;
+    width: 80%;
+    padding: 10%;
+    margin-top: 0;
+    border-bottom: 1px solid #1f1209;
+    box-shadow: 0 20px 20px -20px #333;
+    margin: -50px auto 10px; 
+  }
+
+  a{
+      color: #cead78;
+      text-decoration: none;
+  }
