@@ -5,7 +5,8 @@ import java.util.List;
 public class Exponate
 {
     String id;
-    String Name;
+    String name;
+    String queryName;
     String image;
     List<ExponateData> datas;
 
@@ -18,11 +19,11 @@ public class Exponate
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getImage() {
@@ -39,5 +40,13 @@ public class Exponate
 
     public void setDatas(List<ExponateData> datas) {
         this.datas = datas;
+    }
+
+    public String getQueryName() {
+        return queryName;
+    }
+
+    public void setQueryName(String queryName) {
+        this.queryName = queryName;
     }
 }

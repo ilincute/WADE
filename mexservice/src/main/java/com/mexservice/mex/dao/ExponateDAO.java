@@ -11,7 +11,7 @@ import java.util.List;
 public class ExponateDAO
 {
 
-    public static final String INSERT_FORMAT = "insert into exponates values (?, ?, ?)";
+    public static final String INSERT_FORMAT = "insert into exponates values (?, ?, ?, ?)";
 
     public static List<Exponate> getAll()
     {
@@ -32,6 +32,7 @@ public class ExponateDAO
             statement.setString(1, exponate.getId());
             statement.setString(2, exponate.getName());
             statement.setString(3, exponate.getImage());
+            statement.setString(4, exponate.getQueryName());
 
             statement.executeUpdate();
         }
@@ -50,7 +51,5 @@ public class ExponateDAO
                 System.err.println(e.getMessage());
             }
         }
-
-
     }
 }
