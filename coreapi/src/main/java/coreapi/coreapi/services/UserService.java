@@ -35,7 +35,7 @@ public class UserService
             throws IOException {
 
         HttpClient httpclient = HttpClients.createDefault();
-        HttpPost httppost = new HttpPost("http://localhost:8083/ra/register");
+        HttpPost httppost = new HttpPost("http://35.184.201.148:80/ra/register");
 
         List<NameValuePair> params = new ArrayList<NameValuePair>(2);
         params.add(new BasicNameValuePair("userName", userName));
