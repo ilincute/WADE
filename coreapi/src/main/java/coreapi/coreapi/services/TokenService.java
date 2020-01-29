@@ -22,6 +22,12 @@ import java.util.UUID;
 
 public class TokenService
 {
+
+    public static boolean check(String token)
+    {
+        return TokenDAO.doesExist(token);
+    }
+
     public static String getTokenForUser(String username, String password)
     {
         try
