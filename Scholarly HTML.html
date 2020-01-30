@@ -520,7 +520,58 @@
             </p>
         </section>
         <section id="scop">
-            <h1>Preliminary considerations about the internal data structures/models to be used</h1>
+            <h1>Project Progress</h1>
+            <p>
+                For the final presentation of our project, we managed to implement the following:
+                <ul>
+                    <li>Application access via QR code</li>
+                    <li>Deployed application in Google Cloud environment</li>
+                    <li>Authentication and login</li>
+                    <li>Museums floor plan and presentation of each's museum exhibitions</li>
+                    <li>QR code exhibit information search</li>
+                    <li>User friendly and interactive interface</li>
+                </ul>
+            </p>
+        </section>
+        <section id="scop">
+            <h1>Implemented API</h1>
+            <p>For our application we have implemented one API that aggregates four services:</p>
+            <ol>
+                <li>Spring Boot authentication service</li>
+                <li>Spring Boot with SQLite integration for storing the exhibits</li>
+                <li>Spring Boot with Apache Jena adaptor for SPARQL queries to Wikidata endpoint</li>
+                <li>Main service that aggregates the above services</li>
+            </ol>
+            <p>All of these are aggregate into one service which serves as a bridge between the front-end and the back-end.</p>
+            <p>The four services and the Node.js user application are hosted on Google Compute Engine, each on a virtual machine running Ubuntu.</p>
+        </section>
+        <section id="scop">
+            <h1>Use of knowledge sources</h1>
+            <p>Our application serves as a museum guide and the museums we chose for the purpose of this project are the four museums from the Palace of Culture Iasi.</p>
+            <p>The Palace of Culture hosts the following museums:</p>
+            <ul>
+                <li>Art Museum</li>
+                <li>Ethnographic Museum</li>
+                <li>Science Museum</li>
+                <li>History Museum</li>
+            </ul>
+            <p>All of these museums host well-known exhibits from Romanian artists and are a source of Romanian culture from centruies ago until present days.</p>
+            <p>We went to the Palace of Culture, made an idea about the exhibits and took some photos so that the information presented to the user could be as much closer as possible to reality. After this research, we searched Wikidata for the exhibits we chose to present in our application and, for our surprise, didn't find any relevant information. For this reason, we added a few new items to Wikidata, but the approval of the content was not immediate. In order to achieve the project's goal, having SPARQL queries to an endpoint, we decided that we will keep the exhibits' photos in a persistent SQL database and for the sake of this project, we will query Wikidata for exhibits similar to the one from the Palace of Culture's museums.</p>
+            <p>
+                Although the approval of our items was not immediate, the items were finally added to Wikidata, thus contributing to the community. Below are the two items we managed to add to Wikidata.</p>
+                <figure typeof="sa:Image">
+                    <img src="fair.png" width="880" height="655">
+                </figure>
+                <figure typeof="sa:Image">
+                    <img src="helmet.png" width="880" height="655">
+                </figure>
+            <p>
+                Some of the images used in our application ar etaken from the Palace of Culture's site and some were taken by us when visiting the museums for research.
+            </p>
+        </section>
+        <section id="scop">
+            <h1>Preliminary considerations about the project - Midterm evaluation</h1>
+            <h2>Preliminary considerations about the internal data structures/models to be used</h2>
             <p>
                 <h2><b>Scenario: MockGps registration and subsequent packet receival.</b></h2> <br>
                 The api will send a packet to the mock gps service with the following structure: <br>
