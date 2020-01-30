@@ -11,5 +11,7 @@ function getCookie(c_name) {
 }
 
 $(document).ready(function() {
-    $("#me-homepage").text(getCookie(userName));
+    console.log("hello");
+    console.log(getCookie("userName"));
+    $("#me-homepage").html('<img  class="icon" src="/account-icon.png">' + getCookie("userName"));
 });

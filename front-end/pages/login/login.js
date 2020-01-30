@@ -47,7 +47,9 @@ function login() {
         console.log(data);
         setCookie("token", data.token, 2);
         setCookie("userId", data.userId, 2);
-        setCookie("userName", data.username, 2);
+        setCookie("userName", data.userName, 2);
+        window.location.replace("/homepage");
+
     }).catch((error) => {
         console.log(error);
     })

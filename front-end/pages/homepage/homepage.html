@@ -4,6 +4,8 @@
         <title>Homepage</title>
         <link href="./homepage.css" rel="stylesheet"></link>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
     </head>
 
     <body onload="initLanguage()">
@@ -47,10 +49,10 @@
                     <li class="item select"><img class="icon" src="/home-icon.png"></img>Home</li>
                     <li class="item" onclick="window.location.href = '/museums'"><img class="icon" src="/museum-icon.png">Museums</li>
                     <li class="item" onclick="window.location.href = '/search'"><img class="icon" src="/search-icon.png">Search</li>
-                    <li class="item" onclick="window.location.href = '/me'"><img id="me-homepage" class="icon" src="/account-icon.png"></li>
+                    <li class="item" id="me-homepage" onclick="window.location.href = '/me'"><img  class="icon" src="/account-icon.png"></li>
                 </ul>
             </nav>
-        <//div>
+        </div>
         <script src="homepage.js"></script>
     </body>
 </html>
