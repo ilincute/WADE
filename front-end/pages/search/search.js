@@ -1,3 +1,48 @@
+const api = "http://35.239.236.67:80/core/allExponates";
+
+function fetchApi(api, method, body) {
+  const response = fetch(api, {
+    method: method,
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(body)
+  });
+  return response;
+}
+
+function expo() {
+
+
+  let apiLogin = api;
+  fetchApi(apiLogin, "POST", {})
+      .then(response => {
+        return response.json();
+      }).then(function (data) {
+        let target = document.getElementById('search_text').value;
+        $("#search_cards").html("");
+        for (let i = 0; i < data.length; ++i) {
+          if (data[i].name.toLowerCase().includes(target.toLowerCase())) {
+            $("#search_cards").append('                     <div class="card">\n' +
+                '                          <div class="card-title">\n' +
+                '                              <h1>' + data[i].name+ '</h1>\n' +
+                '                          </div>\n' +
+                '                          <div class="card-image">\n' +
+                '                              <img class="image" src="' + data[i].image + '" />\n' +
+                '                          </div>\n' +
+                '                      </div>');
+          }
+
+        }
+      }).catch((error) => {
+        console.log(error);
+      })
+}
+
 var s = $('input'),
     f  = $('form'),
     a = $('.after'),
@@ -25,11 +70,6 @@ a.on('click', function(e){
 
 f.submit(function(e){
   e.preventDefault();
-  m.html('"Give me a museum, and I\'ll fill it" - Picasso').addClass('show');
-  f.addClass('explode');
-  setTimeout(function(){
-    s.val('');
-    f.removeClass('explode');
-    m.removeClass('show');
-  }, 3000);
-})
+  expo();
+});
+
