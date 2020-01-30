@@ -1,5 +1,6 @@
 package com.wd.knowledge;
 
+import com.wd.knowledge.aggregators.DBPediaAggregator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -13,13 +14,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainPointController {
 
     @RequestMapping(path = "/exponate", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> getExponateData(
-            @RequestParam(name="exponateName") String exponateName,
-            @RequestParam(name="targetMuseum") String targetMuseum) {
+    public ResponseEntity<Object> getExponateData(@RequestParam(name="exponateName") String exponateName) {
 
+        String wiki = DBPediaAggregator.queryMueumExponates(exponateName);
 
-        // perform call(s) to the aggregation service
+        if (wiki.equals(""))
+        {
+            return new ResponseEntity<>(wiki, HttpStatus.CONFLICT);
+        }
 
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>(wiki, HttpStatus.OK);
     }
 }

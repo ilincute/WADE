@@ -1,7 +1,13 @@
 package com.wd.knowledge.aggregators;
 
 import org.apache.jena.query.*;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 
 import static com.wd.knowledge.aggregators.WikiDataPredicates.INSTANCE_OF_PREDICATE;
@@ -42,6 +48,8 @@ public class DBPediaAggregator {
 
     public static String queryMueumExponates(String exponateName) {
 
+        String wiki = "";
+
         String sparqlQuery = String.format(SPARQL_QUERY_TEMPLATE_FILTER_MUSEUM_EXPONATES, exponateName);
 
         System.out.println(sparqlQuery);
@@ -53,16 +61,28 @@ public class DBPediaAggregator {
 
         while (resultSet.hasNext()) {
             QuerySolution result = resultSet.next();
+//            System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+//            System.out.println(result);
+//            System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-            for (Iterator<String> it = result.varNames(); it.hasNext(); ) {
-                String varName = it.next();
-                System.out.println(result.get(varName));
+
+            try {
+                Document doc = Jsoup.connect(result.get("thing").toString()).get();
+                Elements es = doc.getElementsByClass("wikibase-listview");
+
+                for (Element e : es)
+                {
+                    wiki += e.toString();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         }
 
         qexec.close() ;
 
-        return null;
+        return wiki;
     }
 
     public static void main(String[] args) {
