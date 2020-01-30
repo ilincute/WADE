@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/knowledge")
 public class MainPointController {
 
-    @RequestMapping(path = "/exponate", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/exponate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getExponateData(@RequestParam(name="exponateName") String exponateName) {
 
         String wiki = DBPediaAggregator.queryMueumExponates(exponateName);
