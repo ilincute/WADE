@@ -4,10 +4,72 @@
         <title>Languages-Page</title>
         <link href="./exhibit-qr-code.css" rel="stylesheet"></link>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="instascan.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
     </head>
 
     <body onload="initLanguage()">
         <div class="content">
+            <video id="preview"></video>
+            <div id="qr-fetch" style="width: 250px; height: 450px; overflow-y: scroll">
+            </div>
+            <script>
+
+                const api = "http://35.239.236.67:80/core/qr";
+
+                function fetchApi(api, method, body) {
+                    const response = fetch(api, {
+                        method: method,
+                        cache: 'no-cache',
+                        credentials: 'same-origin',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        redirect: 'follow',
+                        referrerPolicy: 'no-referrer', // no-referrer, *client
+                        body: JSON.stringify(body) // body data type must match "Content-Type" header
+                    });
+                    return response;
+                }
+
+
+
+                let scanner = new Instascan.Scanner(
+                    {
+                        video: document.getElementById('preview')
+                    }
+                );
+                scanner.addListener('scan', function(content) {
+                    console.log(content);
+                    getQrData(content);
+                });
+                Instascan.Camera.getCameras().then(cameras =>
+                {
+                    if(cameras.length > 0){
+                        scanner.start(cameras[0]);
+                    } else {
+                        console.error("Please enable Camera!");
+                    }
+                });
+
+
+                function getQrData(qr) {
+                    let apiLogin = api + "?qr=" + qr;
+                    fetchApi(apiLogin, "POST", { })
+                        .then(response => {
+                            return response.text();
+                        }).then(function (data) {
+                            scanner.stop();
+                            console.log(data);
+                            $("#qr-fetch").html(data);
+
+                        }).catch((error) => {
+                            console.log(error);
+                        })
+                }
+
+            </script>
             <div class="main">
                 <h1 class="title">Scan QR code here</h1>
             </div>
